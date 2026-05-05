@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contato — InovARENA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .contato-layout { display:grid; grid-template-columns:1fr 1.4fr; gap:80px; align-items:start; margin-top:60px; }
+    .contact-info { display:flex; flex-direction:column; gap:32px; }
+    .contact-item { display:flex; gap:20px; align-items:flex-start; }
+    .contact-item-icon { width:44px; height:44px; background:rgba(0,198,198,.08); border:1px solid var(--border); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
+    .contact-item-title { font-family:var(--font-sub); font-size:16px; font-weight:700; margin-bottom:4px; }
+    .contact-item-desc { font-size:14px; color:rgba(232,244,255,.55); line-height:1.5; }
+    .contact-item-value { font-family:var(--font-sub); font-size:15px; font-weight:600; color:var(--accent); margin-top:4px; }
+    /* FORM */
+    .form-card { background:var(--bg2); border:1px solid var(--border); border-radius:12px; padding:48px; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .form-group { margin-bottom:24px; }
+    .form-label { display:block; font-family:var(--font-sub); font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+    .form-input, .form-select, .form-textarea {
+      width:100%; background:rgba(2,12,24,.8); border:1px solid rgba(0,198,198,.15);
+      border-radius:6px; padding:14px 16px; font-family:var(--font-body); font-size:15px;
+      color:var(--white); outline:none; transition:border-color .2s,box-shadow .2s;
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color:rgba(232,244,255,.25); }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(0,198,198,.08); }
+    .form-select { appearance:none; cursor:pointer; }
+    .form-select option { background:var(--bg2); color:var(--white); }
+    .form-textarea { resize:vertical; min-height:120px; }
+    .form-submit { width:100%; padding:18px; font-size:16px; justify-content:center; }
+    .form-note { text-align:center; margin-top:16px; font-family:var(--font-sub); font-size:13px; color:var(--muted); }
+    .success-msg { display:none; text-align:center; padding:32px; }
+    .success-msg .icon { font-size:48px; margin-bottom:16px; }
+    .success-msg h3 { font-family:var(--font-head); font-size:32px; margin-bottom:8px; color:var(--accent); }
+    .success-msg p { color:rgba(232,244,255,.6); font-size:15px; }
+    @media(max-width:1024px){ .contato-layout{grid-template-columns:1fr;gap:48px;} .form-card{padding:32px;} }
+    @media(max-width:600px){ .form-row{grid-template-columns:1fr;} .form-card{padding:24px;} }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <section class="page-hero">
+    <div class="page-hero-bg"></div><div class="page-hero-glow"></div>
+    <div style="position:relative;z-index:1">
+      <div class="section-label">Contato</div>
+      <h1 class="section-title" style="font-size:clamp(56px,8vw,100px)">VAMOS<br><span class="accent">CONVERSAR</span></h1>
+      <p class="section-sub">Preencha o formulário ou fale diretamente pelo WhatsApp. Nossa equipe retorna em breve.</p>
+    </div>
+  </section>
+  <section class="reveal">
+    <div class="contato-layout">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-item-icon">💬</div>
+          <div>
+            <div class="contact-item-title">WhatsApp</div>
+            <p class="contact-item-desc">Atendimento rápido e direto com nossa equipe.</p>
+            <div class="contact-item-value">Seg–Sex, 9h–18h</div>
+            <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-family:var(--font-sub);font-size:13px;font-weight:700;color:var(--accent);text-decoration:none;letter-spacing:1px">Abrir WhatsApp →</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📧</div>
+          <div>
+            <div class="contact-item-title">E-mail</div>
+            <p class="contact-item-desc">Para orçamentos detalhados e dúvidas técnicas.</p>
+            <div class="contact-item-value">contato@inovarena.com.br</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🕐</div>
+          <div>
+            <div class="contact-item-title">Horário de atendimento</div>
+            <p class="contact-item-desc">Segunda a sexta-feira<br>das 9h às 18h (horário de Brasília)</p>
+          </div>
+        </div>
+        <div style="background:rgba(0,198,198,.06);border:1px solid var(--border);border-radius:10px;padding:24px;margin-top:8px;">
+          <div style="font-family:var(--font-sub);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:8px;">ℹ️ Como funciona</div>
+          <p style="font-size:14px;color:rgba(232,244,255,.6);line-height:1.65;">Após o contato, nossa equipe apresenta os planos disponíveis e ativa a licença diretamente. Não há compra online — tudo é feito com acompanhamento personalizado.</p>
+        </div>
+      </div>
+      <div class="form-card">
+        <div id="form-content">
+          <div class="section-label" style="margin-bottom:24px">Formulário de contato</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="nome">Nome *</label>
+              <input class="form-input" type="text" id="nome" placeholder="Seu nome" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="empresa">Empresa / Arena</label>
+              <input class="form-input" type="text" id="empresa" placeholder="Nome da empresa"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">E-mail *</label>
+            <input class="form-input" type="email" id="email" placeholder="seu@email.com" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="whatsapp">WhatsApp</label>
+            <input class="form-input" type="tel" id="whatsapp" placeholder="(11) 99999-9999"/>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="interesse">Interesse *</label>
+              <select class="form-select" id="interesse">
+                <option value="">Selecione...</option>
+                <option>Sports Manager</option>
+                <option>Consultoria OBS/Mídia</option>
+                <option>Ambos</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="modalidade">Modalidade</label>
+              <select class="form-select" id="modalidade">
+                <option value="">Selecione...</option>
+                <option>Futsal</option>
+                <option>Basquete</option>
+                <option>Futebol</option>
+                <option>Múltiplas</option>
+                <option>Outra</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="mensagem">Mensagem *</label>
+            <textarea class="form-textarea" id="mensagem" placeholder="Conte sobre seu evento, arena ou dúvida..." required></textarea>
+          </div>
+          <button class="btn-primary form-submit" onclick="submitForm()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Enviar mensagem
+          </button>
+          <p class="form-note">Retornamos em até 1 dia útil via e-mail ou WhatsApp.</p>
+        </div>
+        <div class="success-msg" id="success-msg">
+          <div class="icon">✅</div>
+          <h3>Mensagem enviada!</h3>
+          <p>Obrigado pelo contato. Nossa equipe retornará em breve via e-mail ou WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
+  <script src="main.js"></script>
+  <script>
+    function submitForm() {
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const interesse = document.getElementById('interesse').value;
+      const mensagem = document.getElementById('mensagem').value.trim();
+      if (!nome || !email || !interesse || !mensagem) {
+        alert('Por favor, preencha os campos obrigatórios (*).');
+        return;
+      }
+      // Monta link do WhatsApp com os dados do formulário
+      const empresa = document.getElementById('empresa').value.trim();
+      const wa = document.getElementById('whatsapp').value.trim();
+      const modalidade = document.getElementById('modalidade').value;
+      const WA_NUMBER = '55XXXXXXXXXXX'; // Substitua pelo seu número
+      const texto = encodeURIComponent(
+        `Olá! Vim pelo site da InovARENA.\n\n` +
+        `*Nome:* ${nome}\n` +
+        `*Empresa:* ${empresa || '—'}\n` +
+        `*E-mail:* ${email}\n` +
+        `*WhatsApp:* ${wa || '—'}\n` +
+        `*Interesse:* ${interesse}\n` +
+        `*Modalidade:* ${modalidade || '—'}\n\n` +
+        `*Mensagem:* ${mensagem}`
+      );
+      window.open(`https://wa.me/${WA_NUMBER}?text=${texto}`, '_blank');
+      document.getElementById('form-content').style.display = 'none';
+      document.getElementById('success-msg').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

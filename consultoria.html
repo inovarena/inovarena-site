@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consultoria OBS — InovARENA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .services-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:60px; }
+    .service-card { background:var(--bg2); border:1px solid var(--border); border-radius:12px; padding:40px; position:relative; overflow:hidden; transition:border-color .2s,background .2s; }
+    .service-card:hover { border-color:rgba(0,198,198,.3); background:var(--bg3); }
+    .service-card::before { content:''; position:absolute; top:0;left:0;right:0; height:2px; background:linear-gradient(90deg,transparent,var(--accent),transparent); opacity:0; transition:opacity .3s; }
+    .service-card:hover::before { opacity:1; }
+    .service-icon { font-size:32px; margin-bottom:20px; }
+    .service-title { font-family:var(--font-sub); font-size:22px; font-weight:700; margin-bottom:12px; }
+    .service-desc { font-size:15px; color:rgba(232,244,255,.55); line-height:1.65; }
+    .cta-section { background:var(--bg2); border-top:1px solid var(--border); text-align:center; }
+    .cta-section .section-sub { margin:0 auto 40px; text-align:center; }
+    @media(max-width:768px){ .services-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <section class="page-hero">
+    <div class="page-hero-bg"></div><div class="page-hero-glow"></div>
+    <div style="position:relative;z-index:1">
+      <div class="section-label">Consultoria</div>
+      <h1 class="section-title" style="font-size:clamp(56px,8vw,100px)">OBS &amp;<br>MULTIMÍDIA<br><span class="accent">PARA TELÕES</span></h1>
+      <p class="section-sub">Ajudamos sua arena ou evento a estruturar toda a operação de telão e transmissão com nível profissional.</p>
+    </div>
+  </section>
+  <section class="reveal">
+    <div class="section-label">Nossos serviços</div>
+    <h2 class="section-title">O QUE FAZEMOS<br><span class="accent">POR VOCÊ</span></h2>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">🎥</div><div class="service-title">Configuração do OBS Studio</div><p class="service-desc">Setup completo do OBS para captura, sobreposição do placar e transmissão ao vivo. Definição de cenas, fontes, transições e qualidade de stream.</p></div>
+      <div class="service-card"><div class="service-icon">📺</div><div class="service-title">Infraestrutura de Telão</div><p class="service-desc">Consultoria na escolha e configuração de hardware para telões de LED e projetores. Cabeamento, placas de vídeo, resolução e refresh rate ideais.</p></div>
+      <div class="service-card"><div class="service-icon">🎨</div><div class="service-title">Identidade Visual ao Vivo</div><p class="service-desc">Criação de overlays, vinhetas e layouts personalizados para transmissão e exibição. Integramos a identidade do seu clube ou evento em cada detalhe.</p></div>
+      <div class="service-card"><div class="service-icon">📡</div><div class="service-title">Transmissão ao Vivo</div><p class="service-desc">Configuração de stream para YouTube, Instagram, Twitch e outras plataformas. Bitrate, resolução e latência otimizados para cada plataforma.</p></div>
+      <div class="service-card"><div class="service-icon">🔊</div><div class="service-title">Áudio e Mixagem</div><p class="service-desc">Setup de áudio no OBS com mixagem de microfones, narração e trilha sonora. Filtros de ruído e equalização para transmissões de qualidade.</p></div>
+      <div class="service-card"><div class="service-icon">🛠️</div><div class="service-title">Suporte em Evento</div><p class="service-desc">Acompanhamento presencial ou remoto durante o evento. Nossa equipe garante que tudo funcione perfeitamente do início ao fim.</p></div>
+    </div>
+  </section>
+  <section class="cta-section reveal">
+    <div class="section-label" style="text-align:center">Fale conosco</div>
+    <h2 class="section-title">VAMOS ESTRUTURAR<br><span class="accent">SUA OPERAÇÃO</span></h2>
+    <p class="section-sub">Conte como é sua arena e o que você precisa. Montamos a solução ideal para você.</p>
+    <a href="contato.html" class="btn-primary">Solicitar consultoria</a>
+  </section>
+  <div id="footer-placeholder"></div>
+  <script src="main.js"></script>
+</body>
+</html>

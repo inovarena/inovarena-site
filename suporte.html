@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Suporte — InovARENA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .support-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:60px; }
+    .support-card { background:var(--bg2); border:1px solid var(--border); border-radius:12px; padding:40px; text-align:center; transition:border-color .2s,background .2s; }
+    .support-card:hover { border-color:rgba(0,198,198,.3); background:var(--bg3); }
+    .support-icon { font-size:40px; margin-bottom:16px; }
+    .support-title { font-family:var(--font-sub); font-size:22px; font-weight:700; margin-bottom:12px; }
+    .support-desc { font-size:15px; color:rgba(232,244,255,.55); line-height:1.6; margin-bottom:28px; }
+    .support-detail { font-family:var(--font-sub); font-size:13px; font-weight:600; color:var(--accent); letter-spacing:1px; margin-bottom:20px; }
+    .links-section { margin-top:80px; }
+    .quick-links { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:48px; }
+    .quick-link { display:flex; align-items:center; gap:16px; background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:24px; text-decoration:none; color:var(--white); transition:border-color .2s,background .2s; }
+    .quick-link:hover { border-color:rgba(0,198,198,.3); background:var(--bg3); }
+    .quick-link-icon { font-size:24px; flex-shrink:0; }
+    .quick-link-title { font-family:var(--font-sub); font-size:16px; font-weight:700; margin-bottom:4px; }
+    .quick-link-desc { font-size:13px; color:rgba(232,244,255,.5); }
+    @media(max-width:1024px){ .support-grid{grid-template-columns:1fr;} .quick-links{grid-template-columns:1fr 1fr;} }
+    @media(max-width:600px){ .quick-links{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <section class="page-hero">
+    <div class="page-hero-bg"></div><div class="page-hero-glow"></div>
+    <div style="position:relative;z-index:1">
+      <div class="section-label">Suporte</div>
+      <h1 class="section-title" style="font-size:clamp(56px,8vw,100px)">ESTAMOS<br><span class="accent">AQUI PRA</span><br>AJUDAR</h1>
+      <p class="section-sub">Nossa equipe está disponível para te ajudar com o Sports Manager e qualquer dúvida sobre nossos serviços.</p>
+    </div>
+  </section>
+  <section class="reveal">
+    <div class="section-label">Canais de atendimento</div>
+    <h2 class="section-title">FALE COM<br><span class="accent">A EQUIPE</span></h2>
+    <div class="support-grid">
+      <div class="support-card">
+        <div class="support-icon">💬</div>
+        <div class="support-title">WhatsApp</div>
+        <p class="support-desc">O jeito mais rápido de falar com a nossa equipe. Respondemos em minutos durante o horário de atendimento.</p>
+        <div class="support-detail">Seg–Sex, 9h–18h</div>
+        <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" class="btn-primary">Abrir WhatsApp</a>
+      </div>
+      <div class="support-card">
+        <div class="support-icon">📧</div>
+        <div class="support-title">E-mail</div>
+        <p class="support-desc">Para solicitações mais detalhadas, dúvidas técnicas ou envio de arquivos. Respondemos em até 24h úteis.</p>
+        <div class="support-detail">suporte@inovarena.com.br</div>
+        <a href="mailto:suporte@inovarena.com.br" class="btn-secondary">Enviar e-mail</a>
+      </div>
+    </div>
+    <div class="links-section">
+      <div class="section-label">Acesso rápido</div>
+      <h3 class="section-title" style="font-size:clamp(32px,4vw,48px)">RECURSOS<br><span class="accent">ÚTEIS</span></h3>
+      <div class="quick-links">
+        <a href="sports-manager.html#recursos" class="quick-link">
+          <div class="quick-link-icon">❓</div>
+          <div><div class="quick-link-title">Perguntas Frequentes</div><div class="quick-link-desc">Respostas para as dúvidas mais comuns</div></div>
+        </a>
+        <a href="sports-manager.html#recursos" class="quick-link">
+          <div class="quick-link-icon">🔧</div>
+          <div><div class="quick-link-title">Configuração e Instalação</div><div class="quick-link-desc">Passo a passo para configurar o sistema</div></div>
+        </a>
+        <a href="sports-manager.html#recursos" class="quick-link">
+          <div class="quick-link-icon">🆕</div>
+          <div><div class="quick-link-title">Novidades</div><div class="quick-link-desc">Veja as últimas atualizações do app</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
+  <script src="main.js"></script>
+</body>
+</html>
