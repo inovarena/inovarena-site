@@ -20,8 +20,7 @@ function buildNav() {
   return `
   <nav id="main-nav">
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon"></div>
-      <span class="nav-logo-text">Inov<span>ARENA</span></span>
+      <img src="logo.png" alt="InovARENA" style="height:40px;width:auto;display:block;" />
     </a>
     <ul class="nav-links" id="nav-links">
       ${links.map(l => `
