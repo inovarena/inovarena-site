@@ -159,14 +159,13 @@
     }
 
     @media (max-width: 1024px) {
-      .hero { padding: 120px 32px 80px; }
-      .hero-visual { display: none; }
+      .hero { padding: 120px 32px 80px; flex-direction: column; justify-content: center; }
       .hero-content { max-width: 100%; }
+      .hero-scoreboard { display: none; }
       .pillars-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
-      .hero { padding: 110px 20px 100px; }
-      .scorebug { left: 20px; bottom: 32px; }
+      .hero { padding: 110px 20px 60px; }
     }
   </style>
 </head>
@@ -194,19 +193,44 @@
         </a>
       </div>
     </div>
-    <!-- SCOREBUG -->
-    <div class="scorebug">
-      <div class="sb-team-block">
-        <span class="sb-team-name">Casa</span>
-        <span class="sb-score">34</span>
-      </div>
-      <div class="sb-center">
-        <span class="sb-period">1º PER</span>
-        <span class="sb-clock" id="clock">08:42</span>
-      </div>
-      <div class="sb-team-block">
-        <span class="sb-score">28</span>
-        <span class="sb-team-name">Vis.</span>
+    <!-- SCOREBOARD -->
+    <div class="hero-scoreboard">
+      <div class="sb-wrap">
+        <div class="sb-live"><span>● AO VIVO</span></div>
+        <div class="sb-period-label">1º Período</div>
+        <div class="sb-clock" id="clock">08:42</div>
+        <div class="sb-teams">
+          <div class="sb-team">
+            <div class="sb-team-name">Casa</div>
+            <div class="sb-score">34</div>
+          </div>
+          <div class="sb-divider"></div>
+          <div class="sb-team">
+            <div class="sb-team-name">Visitante</div>
+            <div class="sb-score">28</div>
+          </div>
+        </div>
+        <div class="sb-stats">
+          <div class="sb-stat">
+            <div class="sb-stat-label">T.T Casa</div>
+            <div class="sb-stat-val">2</div>
+          </div>
+          <div class="sb-stat-divider"></div>
+          <div class="sb-stat">
+            <div class="sb-stat-label">Faltas Casa</div>
+            <div class="sb-stat-val">3</div>
+          </div>
+          <div class="sb-stat-divider"></div>
+          <div class="sb-stat">
+            <div class="sb-stat-label">Faltas Vis.</div>
+            <div class="sb-stat-val">1</div>
+          </div>
+          <div class="sb-stat-divider"></div>
+          <div class="sb-stat">
+            <div class="sb-stat-label">T.T Vis.</div>
+            <div class="sb-stat-val">0</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
